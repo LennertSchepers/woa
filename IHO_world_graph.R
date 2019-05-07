@@ -32,7 +32,7 @@ p1 <- ggplot(data = iho_table_order) +
   geom_point(aes(x = spec_s200m, y = IHO.area, col = 'c2')) +
   geom_point(aes(x = spec_200.1000m, y = IHO.area, col = 'c3')) +
   geom_point(aes(x = spec_l1000m, y = IHO.area, col = 'c4')) +
-  labs(title = 'Number of Marine Invertabrate Benthic species',
+  labs(#title = 'Number of Marine Invertabrate Benthic species',
        x = 'number of species',
        y = 'IHO Sea Area') +
   scale_color_manual('Depth Category',
@@ -46,8 +46,9 @@ p1 <- ggplot(data = iho_table_order) +
                                  "c4" = '> 1000 m')
   ) +
   xlim(c(0, max(iho_table_order$spec_all))) +
-  draw_label('IHO areas by MarineRegions.org; species information by WoRMS; species distributions by OBIS; bathymetry by EMODnet Bathymetry and GEBCO',
-             x = 14000, y = 1.5, colour = 'grey', size = 10)
+  draw_label('IHO areas by MarineRegions.org; species information by WoRMS;
+             species distributions by OBIS; bathymetry by EMODnet Bathymetry and GEBCO',
+             x = 13000, y = 2, colour = 'black', size = 12)
 
 legend <- get_legend(p1)
 
@@ -74,7 +75,7 @@ iho_world_graph <- ggdraw() +
              height = 0.4) +
   draw_grob(legend,
             x = 0.65,
-            y = -.1,
+            y = -.05,
             width = 0.4,
             height = 0.4)
 
