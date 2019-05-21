@@ -26,5 +26,3 @@ Different depth categories:
 A large graph which includes three world maps: IHO_world_graph.png, generated in [IHO_world_graph.r](https://github.com/LennertSchepers/woa/blob/master/IHO_world_graph.R)
 
 ![](https://github.com/LennertSchepers/woa/blob/master/IHO_world_graph.png)
-This is a work in progress
-Lennert
