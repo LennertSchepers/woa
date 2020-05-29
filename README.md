@@ -11,7 +11,7 @@ This is a collaboration between [MarineRegions](http://www.marineregions.org), [
 Query by OBIS: see https://github.com/iobis/woa
 
 
-WOA benthic invertebrate diversity maps by IHO area and depth ([script](https://github.com/LennertSchepers/woa/blob/master/IHO_world_maps.R)): 
+WOA benthic invertebrate diversity maps by IHO area and depth ([script](IHO_world_maps.R)): 
 
 * maps of number of species: species_depth_spec_... .png
 * maps of number of records: records_depth_rec_... .png
