@@ -4,6 +4,7 @@ library(ggplot2)
 library(viridis)
 library(cowplot)
 library(magick) # needed for cowplot::draw_image
+theme_set(theme_cowplot())
 
 iho_table <- read.csv('WOA2-invert_marine_benthic_per_IHO.csv')
 
@@ -82,3 +83,17 @@ iho_world_graph <- ggdraw() +
 save_plot('IHO_world_graph.png',
           iho_world_graph,
           base_height = 15)
+
+
+
+# export to ppt
+library(officer)
+library(rvg)
+
+editable_graph <- dml(ggobj = iho_world_graph)
+
+read_pptx('template.pptx') %>%
+  add_slide() %>%
+  ph_with(value = editable_graph,
+          location = ph_location_fullsize()) %>%
+  print(target = 'IHO_world_graph.pptx')
