@@ -32,11 +32,11 @@ for (i in 1:3){
   titles <- c('< 200 m', '200 - 1000 m', '> 1000 m')
   p <- ggplot(iho) +
     geom_sf(aes(fill = get(columns[i])), size = 0.01) +
-            coord_sf(crs=54030) +
+            coord_sf(crs='ESRI:54030') +
             scale_fill_viridis_c('# species', option = "plasma", limits = c(0,12000)) +
             ggtitle(titles[i]) +
             theme(panel.grid.major = element_line(colour = 'transparent'))
-  save_plot(paste0('species_depth_', columns[i],'.png'),
+  save_plot(paste0('species_depth_', columns[i],'.pdf'),
             p,
             base_aspect_ratio = 2)
 }
@@ -51,11 +51,11 @@ for (i in 1:3){
   titles <- c('< 200 m', '200 - 1000 m', '> 1000 m')
   p <- ggplot(iho) +
     geom_sf(aes(fill = get(columns[i])), size = 0.01) +
-    coord_sf(crs=54030) +
+    coord_sf(crs='ESRI:54030') +
     scale_fill_viridis_c('# records', option = "viridis", limits = c(0,1E6)) +
     ggtitle(titles[i]) +
     theme(panel.grid.major = element_line(colour = 'transparent'))
-  save_plot(paste0('records_depth_', columns[i],'.png'),
+  save_plot(paste0('records_depth_', columns[i],'.pdf'),
             p,
             base_aspect_ratio = 2)
 }
