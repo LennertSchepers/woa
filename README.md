@@ -36,7 +36,4 @@ You can re-run the full analysis in an RStudio environment by clicking on the bu
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vlizBE/woa/master?urlpath=rstudio)
 
-This will open an online RStudio environment (thank you Binder!). To run the analysis, open the 'index.Rmd' file.
-In this file, you can run separate code chunks or click on the 'knit' button to recreate the html file
-(this will take a while, and open a pop-up window).
-You can also edit the code and run your own analysis.
+This will open an online RStudio environment (thank you Binder!). To run the analysis, open the 'IHO_world_graph.R' file and execute the code.
