@@ -4,7 +4,6 @@ library(ggplot2)
 library(viridis)
 library(cowplot)
 library(mregions)
-library(magick) # needed for cowplot::draw_image
 theme_set(theme_cowplot())
 theme_update(plot.title = element_text(hjust = 0.5))
 
@@ -151,6 +150,11 @@ save_plot('IHO_world_graph.pdf',
           base_height = 15,
           base_width = 16.5)
 
+
+save_plot('IHO_world_graph.png',
+          iho_world_graph,
+          base_height = 15,
+          base_width = 16.5)
 
 
 # # export to ppt
